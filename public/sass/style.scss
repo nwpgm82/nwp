@@ -1,0 +1,11 @@
+@font-face{
+    font-family: acumin;
+    src: url(../../font/Acumin-BdPro.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: acumin;
+}
+@import "topbar", "home", "profile";

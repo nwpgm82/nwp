@@ -236,6 +236,8 @@
         width: 100%;
         height: 300px;
         box-shadow: 0px 0px 10px #000; }
+      .profile_page .profile_detail_page .project_grid p, .profile_page .project .project_grid p, .profile_page .gallery .project_grid p {
+        padding-top: 8px; }
       .profile_page .profile_detail_page .project_grid a, .profile_page .project .project_grid a, .profile_page .gallery .project_grid a {
         padding-top: 8px;
         color: #fff;
@@ -250,7 +252,9 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       gap: 16px;
-      padding: 32px; }
+      padding: 32px;
+      width: 100%;
+      height: 100%; }
       .profile_page .profile_detail_page .gallery_grid img, .profile_page .project .gallery_grid img, .profile_page .gallery .gallery_grid img {
         box-shadow: 0px 0px 10px #000; }
 

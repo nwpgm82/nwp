@@ -1,0 +1,84 @@
+{
+    "snack": [{
+        "id": 1,
+        "name": "Lays Classic",
+        "price": 20,
+        "path_img": "lays_classic.png"
+    },{
+        "id": 2,
+        "name": "Cheetos",
+        "price": 20,
+        "path_img": "cheetos.png"
+    },{
+        "id": 3,
+        "name": "Lays Sour Cream & Onion",
+        "price": 20,
+        "path_img": "lays_sourcream&onion.png"
+    },{
+        "id": 4,
+        "name": "Top",
+        "price": 10,
+        "path_img": "top.png"
+    },{
+        "id": 5,
+        "name": "m&m Milk Chocolate",
+        "price": 25,
+        "path_img": "m&m_milkchocolate.png"
+    },{
+        "id": 6,
+        "name": "m&m Peanut",
+        "price": 25,
+        "path_img": "m&m_peanut.png"
+    },{
+        "id": 7,
+        "name": "Hershey's Milk Chocolate",
+        "price": 32,
+        "path_img": "hershey_milkchocolate.png"
+    },{
+        "id": 8,
+        "name": "KitKat",
+        "price": 20,
+        "path_img": "kitkat.png"
+    }],
+    "beverage": [{
+        "id": 9,
+        "name": "Coca Cola Original",
+        "price": "20",
+        "path_img": "coke.png"
+    },{
+        "id": 10,
+        "name": "Coca Cola Zero",
+        "price": "20",
+        "path_img": "coke_zero.png"
+    },{
+        "id": 11,
+        "name": "Fanta Orange",
+        "price": "20",
+        "path_img": "fanta_orange.png"
+    },{
+        "id": 12,
+        "name": "Sprite",
+        "price": "20",
+        "path_img": "sprite.png"
+    },{
+        "id": 13,
+        "name": "Oishi Green Tea",
+        "price": "25",
+        "path_img": "oishi.png"
+    },{
+        "id": 14,
+        "name": "Oishi Honey Lemon",
+        "price": "25",
+        "path_img": "oishi_honeylemon.png"
+    },{
+        "id": 15,
+        "name": "Oishi Genmai",
+        "price": "25",
+        "path_img": "oishi_genmai.png"
+    },{
+        "id": 16,
+        "name": "Oishi Green Tea plus C Kyoho Grape",
+        "price": "25",
+        "path_img": "oishi_grape.png"
+    }]
+}

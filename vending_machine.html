@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vending_machine.css">
+    <script src="js/vending_machine.js"></script>
+    <title>Vending Machine</title>
+</head>
+
+<body onload="loadData()">
+    <div class="flex_box">
+        <div class="machine_body">
+            <div class="machine_mirror"></div>
+            <div class="machine_monitor"></div>
+            <div class="machine_tray"></div>
+            <div class="machine_Lfoot"></div>
+            <div class="machine_Rfoot"></div>
+        </div>
+        <div class="monitor">
+            <div class="start_box" id="start_box">
+                <h1>Rabbit Box</h1>
+                <img src="img/vending_machine/icon.png" alt="logo">
+                <button class="start_btn" onclick="start_btn()">Start</button>
+            </div>
+            <div class="product_box">
+                <div class="product_content">
+                    <div class="product_box_header">
+                        <h2>Product List</h2>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="product_items_content">
+                        <div class="product_items">
+                            <h2>Snack</h2>
+                            <div class="hr"></div>
+                            <div class="product_items_list" id="snack_list"></div>
+                        </div>
+                        <div class="product_items">
+                            <h2>Beverage</h2>
+                            <div class="hr"></div>
+                            <div class="product_items_list" id="bev_list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product_select">
+                <div id="product_review">
+                    <h2>Total : <label id="total_baht">0</label> Baht</h2>
+                    <h2 id="change_text">Change : <label id="change"></label> Baht</h2>
+                    <a href="vending_machine.html" id="restart_btn"><button>Restart</button></a>
+                    <div class="cash_list">
+                        <button id="1" onclick="addCash(id)">1</button>
+                        <button id="2" onclick="addCash(id)">2</button>
+                        <button id="5" onclick="addCash(id)">5</button>
+                        <button id="10" onclick="addCash(id)">10</button>
+                        <button id="20" onclick="addCash(id)">20</button>
+                        <button id="50" onclick="addCash(id)">50</button>
+                        <button id="100" onclick="addCash(id)">100</button>
+                        <button id="500" onclick="addCash(id)">500</button>
+                        <button id="1000" onclick="addCash(id)">1000</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

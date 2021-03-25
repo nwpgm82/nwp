@@ -1,0 +1,331 @@
+@font-face {
+    font-family: spaceFont;
+    src: url(../font/Kidspace-DEMO.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: spaceFont;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../img/vending_machine/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flex_box {
+    width: 1200px;
+    padding: 32px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    @media screen and (max-width: 1199px) {
+        width: 632px;
+        grid-template-columns: 100%;
+        row-gap: 32px;
+    }
+
+    .machine_body {
+        width: 100%;
+        height: 800px;
+        border: 4px solid #000;
+        border-radius: 40px;
+        padding: 32px;
+        background-image: url(../img/vending_machine/machine_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1.4fr 0.6fr;
+        grid-template-rows: 0.7fr 0.3fr;
+        grid-template-areas: "mirror monitor""tray .";
+        gap: 32px;
+        position: relative;
+
+        .machine_mirror {
+            grid-area: mirror;
+            width: 100%;
+            height: 100%;
+            padding: 24px;
+            border: 4px solid #000;
+            border-radius: 40px;
+            background-color: rgba(176, 224, 230, 1);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 8px;
+
+            img {
+                width: 60px;
+                height: 60px;
+                opacity: 0.5;
+                object-fit: contain;
+            }
+        }
+
+        .machine_monitor {
+            grid-area: monitor;
+            width: 100%;
+            height: 60%;
+            margin-top: 32px;
+            border: 4px solid #000;
+            background-image: url(../img/vending_machine/monitor_home.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: -32px;
+        }
+
+        .machine_tray {
+            grid-area: tray;
+            width: 60%;
+            height: 100px;
+            margin: 0 auto;
+            border: 4px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .machine_Lfoot {
+            width: 60px;
+            height: 20px;
+            border: 4px solid #000;
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            background-color: #112341;
+        }
+
+        .machine_Rfoot {
+            width: 60px;
+            height: 20px;
+            border: 4px solid #000;
+            position: absolute;
+            bottom: -20px;
+            right: 50px;
+            background-color: #112341;
+        }
+    }
+
+    .monitor {
+        width: 100%;
+        height: 800px;
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid #000;
+        border-radius: 4px;
+        background-image: url(../img/vending_machine/monitor_background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .start_box {
+            h1 {
+                color: #fff;
+                text-align: center;
+                font-size: 40px;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+
+            img,
+            .start_btn {
+                display: block;
+                margin: auto;
+            }
+
+            .start_btn {
+                width: auto;
+                height: 60px;
+                padding: 0 32px;
+                border: none;
+                border-radius: 60px;
+                background-color: yellow;
+                font-size: 24px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: rgb(230, 230, 0);
+                    box-shadow: 0px 0px 10px 2px #000;
+                }
+            }
+        }
+
+        .product_box {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 12px;
+
+            .product_box_header {
+                padding: 12px 32px;
+            }
+
+            .hr {
+                border-bottom: 1px solid #ddd;
+            }
+
+            .product_items_content {
+                width: 100%;
+                height: auto;
+                // padding: 16px;
+
+                .product_items {
+                    padding: 8px 16px;
+
+                    .product_items_list {
+                        margin-top: 16px;
+                        display: grid;
+                        grid-template-columns: repeat(6, 36%);
+                        grid-template-rows: 1fr 1fr;
+                        overflow-x: auto;
+                        grid-auto-flow: column;
+
+                        >div {
+                            border: 1px solid #ddd;
+                            padding: 8px;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #ddd;
+                            }
+                        }
+
+                        img {
+                            width: 60px;
+                            height: 60px;
+                            display: block;
+                            margin: auto auto 16px auto;
+                            object-fit: contain;
+                        }
+
+                        p {
+                            width: 150px;
+                            text-align: center;
+                            display: block;
+                            margin: auto;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                    }
+
+                    ::-webkit-scrollbar {
+                        height: 8px;
+                        width: 4px;
+                    }
+
+                    ::-webkit-scrollbar-track {
+                        background: #ddd;
+                    }
+
+                    ::-webkit-scrollbar-thumb {
+                        background: rgb(255, 208, 0);
+                        border-radius: 4px;
+                    }
+
+                    ::-webkit-scrollbar-thumb:hover {
+                        background: rgb(233, 190, 0);
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+
+        .product_select {
+            width: 100%;
+            height: 100%;
+            padding: 32px;
+            justify-content: center;
+            align-items: center;
+
+            >div {
+                display: block;
+                margin: auto;
+
+                div {
+                    margin: auto auto 32px auto;
+                }
+
+                >h2:nth-child(3) {
+                    display: none;
+                }
+            }
+
+            img {
+                width: 300px;
+                height: 300px;
+                object-fit: contain;
+                display: block;
+                margin: auto;
+            }
+
+            h2 {
+                text-align: center;
+                color: #fff;
+                font-weight: 500;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+                display: none;
+
+                button {
+                    width: auto;
+                    height: 60px;
+                    padding: 0 32px;
+                    border: none;
+                    border-radius: 60px;
+                    background-color: yellow;
+                    font-size: 24px;
+                    display: block;
+                    margin: 32px auto;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: rgb(230, 230, 0);
+                        box-shadow: 0px 0px 10px 2px #000;
+                    }
+                }
+            }
+
+            .cash_list {
+                padding-top: 32px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 16px;
+
+                button {
+                    width: 80px;
+                    height: 40px;
+                    border: none;
+                    border-radius: 12px;
+                    background-color: yellow;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: rgb(230, 230, 0);
+                        box-shadow: 0px 0px 10px 2px #000;
+                    }
+                }
+            }
+        }
+    }
+}

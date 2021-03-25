@@ -1,0 +1,57 @@
+:root{
+    // --blackGrey : #232323;
+    --border_bottom: #fff;
+}
+.topbar {
+    width: 100%;
+    height: 60px;
+    background-color: #232323;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            display: inline-block;
+            // width: auto;
+            // padding: 0 20px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+            }
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                    border-bottom: 2px solid var(--border_bottom);
+                    animation-name: bottom_line;
+                    animation-duration: 0.3s;
+
+                    @keyframes bottom_line {
+                        from {
+                            width: 0;
+                        }
+
+                        to {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

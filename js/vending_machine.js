@@ -83,10 +83,10 @@ const select = async (e) => {
         })
         .then(function (data) {
             if (+e < 9) {
-                console.log("sk",+e)
+                console.log("sk", +e)
                 dataSelect = data.snack.find(sk => sk.id === +e)
             } else {
-                console.log("bev",+e)
+                console.log("bev", +e)
                 dataSelect = data.beverage.find(bev => bev.id === +e)
             }
         })
@@ -96,10 +96,10 @@ const select = async (e) => {
     let price_tag = document.createElement("h2")
     let name_text = document.createTextNode(dataSelect.name)
     let price_text = document.createTextNode(dataSelect.price + " Baht")
-    if(+e < 9){
+    if (+e < 9) {
         img_tag.src = `img/vending_machine/snack/${dataSelect.path_img}`
         img_tag.alt = "snack_preview"
-    }else{
+    } else {
         img_tag.src = `img/vending_machine/beverage/${dataSelect.path_img}`
         img_tag.alt = "bev_preview"
     }

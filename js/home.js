@@ -2,13 +2,13 @@ window.addEventListener("keyup", (event) => {
     console.log(event.key);
     if ((event.key == "Enter") && document.querySelector(".start_page").style.display != "none") {
         main_text()
-    }else if((event.key == "ArrowLeft" || event.key == "a") && document.querySelector(".start_page").style.display == "none"){
+    } else if ((event.key == "ArrowLeft" || event.key == "a") && document.querySelector(".start_page").style.display == "none") {
         profile_Lclick_scroll()
-    }else if((event.key == "ArrowRight" || event.key == "d") && document.querySelector(".start_page").style.display == "none"){
+    } else if ((event.key == "ArrowRight" || event.key == "d") && document.querySelector(".start_page").style.display == "none") {
         profile_Rclick_scroll()
-    }else if((event.key == "Backspace") && document.querySelector(".start_page").style.display == "none" && document.querySelector(".profile_page").scrollLeft != 0){
+    } else if ((event.key == "Backspace") && document.querySelector(".start_page").style.display == "none" && document.querySelector(".profile_page").scrollLeft != 0) {
         document.querySelector(".profile_page").scrollLeft = 0
-    }else if((event.key == "Backspace") && document.querySelector(".start_page").style.display == "none" && document.querySelector(".profile_page").scrollLeft == 0){
+    } else if ((event.key == "Backspace") && document.querySelector(".start_page").style.display == "none" && document.querySelector(".profile_page").scrollLeft == 0) {
         start_text()
     }
 })
@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
         const walk = (x - startX);
-        if(walk > 150){
+        if (walk > 150) {
             profile_Lclick_scroll()
-        }else if(walk < -150){
+        } else if (walk < -150) {
             profile_Rclick_scroll()
         }
     });
@@ -73,7 +73,7 @@ const main_text = () => {
 }
 
 const profile_text = () => {
-    if(document.querySelector('.profile_page').scrollLeft != 1440){
+    if (document.querySelector('.profile_page').scrollLeft != 1440) {
         let start_text = document.querySelector(".start_text")
         let topbar = document.querySelector(".topbar")
         let profile_page = document.querySelector(".profile_page")
@@ -97,36 +97,36 @@ const profile_scroll = () => {
     }
     if (document.querySelector(".profile_page").scrollLeft >= 4320) {
         document.querySelector(".Rarrow").style.display = "none"
-    }else{
+    } else {
         document.querySelector(".Rarrow").style.display = ""
     }
     console.log(document.querySelector(".profile_page").scrollLeft);
 }
 
 const profile_Lclick_scroll = () => {
-    if(document.querySelector(".profile_page").scrollLeft > 4320){
+    if (document.querySelector(".profile_page").scrollLeft > 4320) {
         document.querySelector(".profile_page").scrollLeft = 4320
-    }else if(document.querySelector(".profile_page").scrollLeft > 2880){
+    } else if (document.querySelector(".profile_page").scrollLeft > 2880) {
         document.querySelector(".profile_page").scrollLeft = 2880
-    }else if(document.querySelector(".profile_page").scrollLeft > 1440){
+    } else if (document.querySelector(".profile_page").scrollLeft > 1440) {
         document.querySelector(".profile_page").scrollLeft = 1440
-    }else{
+    } else {
         document.querySelector(".profile_page").scrollLeft = 0
     }
 }
 
 const profile_Rclick_scroll = () => {
-    if(document.querySelector(".profile_page").scrollLeft < 1440){
+    if (document.querySelector(".profile_page").scrollLeft < 1440) {
         document.querySelector(".profile_page").scrollLeft = 1440
-    }else if(document.querySelector(".profile_page").scrollLeft < 2880){
+    } else if (document.querySelector(".profile_page").scrollLeft < 2880) {
         document.querySelector(".profile_page").scrollLeft = 2880
-    }else if(document.querySelector(".profile_page").scrollLeft < 4320){
+    } else if (document.querySelector(".profile_page").scrollLeft < 4320) {
         document.querySelector(".profile_page").scrollLeft = 4320
     }
 }
 
 const project_text = () => {
-    if(document.querySelector('.profile_page').scrollLeft != 2880){
+    if (document.querySelector('.profile_page').scrollLeft != 2880) {
         let start_text = document.querySelector(".start_text")
         let topbar = document.querySelector(".topbar")
         let profile_page = document.querySelector(".profile_page")
@@ -143,7 +143,7 @@ const project_text = () => {
 }
 
 const gallery_text = () => {
-    if(document.querySelector('.profile_page').scrollLeft != 4320){
+    if (document.querySelector('.profile_page').scrollLeft != 4320) {
         let start_text = document.querySelector(".start_text")
         let topbar = document.querySelector(".topbar")
         let profile_page = document.querySelector(".profile_page")
